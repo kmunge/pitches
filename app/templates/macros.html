@@ -1,0 +1,45 @@
+{% macro displayCategories(categories_list) %}
+
+    {% for category in categories_list %}
+        <li>{{ category.title}}</li>
+    {% endfor %}
+
+{% endmacro %}
+
+{% macro displayPitches(pitches_list) %}
+
+    {% for pitch in pitch_list %}
+    <div class="thumbnail">
+        <div class="caption">
+            <div class="card" style="width: 40rem;">
+                <div class="card-body">
+            <h4>Author</h4>
+            <p class="card-subtitle mb-2 text-muted">{{pitch.user.username}}</p>
+            <h2> <a href="{{url_for('main.single_pitch',id=pitch.id)}}"></a>{{pitch.pitch}}</h2>
+            </div>
+        </div>
+        </div>
+    </div>
+    {% endfor %}
+
+{% endmacro %}
+
+{% macro displayComments(all_comments) %}
+{% if all_comments %}
+    {% for comment in all_comments %}
+    <div class="thumbnail" style="background-color: #8faab896">
+        <div class="caption">
+            <div class="card" style="width: 40rem;">
+                <div class="card-body"> 
+                    <p class="card-text">{{comment.comments|capitalize}}</p>
+                    <p class="card-subtitle mb-2 text-muted">Posted by:{{comment.user.username}}</p>
+                    <p class="card-subtitle mb-2 text-muted"> Posted on: {{comment.posted}} </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+{% else %}
+    <h3 class ="text-center" style="font-size:200%"> This Pitch has no Comment </h3>
+{% endif %}
+{% endmacro %}
