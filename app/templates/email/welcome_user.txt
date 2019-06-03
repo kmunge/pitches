@@ -1,0 +1,11 @@
+Hello {{user.username}}
+
+Welcome to Pitches,
+
+we are glad that you signed up to our website, please take a journey of an exiting experience by exploring through our website.
+
+Don't forget to vote and comment on other pitches in the various categories!
+
+Enjoy!
+
+pitches
