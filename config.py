@@ -7,7 +7,7 @@ class Config:
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     UPLOADED_PHOTOS_DEST ='app/static/photos'
-    SECRET_KEY ='moo'
+    SECRET_KEY=os.environ.get('SECRET_KEY')
 
 
     # simple mde  configurations
