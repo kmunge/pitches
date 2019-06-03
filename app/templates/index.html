@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro%}
+
+<!-- Styles block -->
+
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+
+{% block content %}
+<div class = "container" style="background:rgb(211, 208, 208)">
+  <div class="well">
+  
+    <img src="https://s23078.pcdn.co/wp-content/uploads/pitching-articles-freelance-writing.png" alt="">
+  
+  </div>
+
+    <div style="margin-top: 30px; margin-bottom: 30px;">
+
+      <!-- Pick-up Lines -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="thumbnail">
+              <div class="caption">
+                <h4>Pick-up Lines</h4>
+                <p class = "cardbody" style="font-size: 14px">Cheesy, Smart, Geeky, Game of Thrones kind of pickup lines... whatever makes him/her smile!</p>
+                <a href="{{url_for('main.pickUpLines')}}" class="btn btn-warning center-block" role="button">View Pitches</a>
+              </div>
+          </div>
+        </div>
+
+       <!-- Interview Pitches -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <div class="caption">
+              <h4>Interview Pitch</h4>
+              <p class = "cardbody" style="font-size: 14px">Found a dream job, what would you say in 60 seconds to secure that position?.</p>
+              <a href="{{url_for('main.interview')}}" class="btn btn-warning center-block" role="button">View Pitches</a>
+            </div>
+          </div>
+        </div>
+       
+        <!-- Product Pitches -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <div class="caption">
+              <h4>Product Pitch</h4>
+              <p class = "cardbody"  style="font-size: 14px">Invented an amazing product? How would you sell it to Investors/customers?.</p>
+              <a href="{{url_for('main.product')}}" class="btn btn-warning center-block" role="button">View Pitches</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Promotion Pitches -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <div class="caption">
+              <h4>Promotion Pitches</h4>
+              <p class = "cardbody" style="font-size: 14px">Think you deserve a promotion? Time to convince your Human Resources Manager/ Employer!.</p>
+              <a href="{{url_for('main.promotion')}}" class="btn btn-warning center-block" role="button">View Pitches</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Business Pitches -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <div class="caption">
+              <h4>Business Pitches</h4>
+              <p class = "cardbody" style="font-size: 14px">Looking for Investors for your new business idea? How would you sell them the idea?.</p>
+              <a href="{{url_for('main.business')}}" class="btn btn-warning center-block" role="button">View Pitches</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech-Projects Pitches -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <div class="caption">
+              <h4>Tech-Projects Pitches</h4>
+              <p class = "cardbody" style="font-size: 14px">Have a life changing tech-project idea? Why should Investors or other developers want to be part of it?.</p>
+              <a href="{{url_for('main.tech')}}" class="btn btn-warning center-block" role="button">View Pitches</a>
+            </div>
+          </div>
+        </div>        
+       </div>
+  
+</div>
+{% endblock%}
