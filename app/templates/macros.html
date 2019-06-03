@@ -27,7 +27,7 @@
 {% macro displayComments(all_comments) %}
 {% if all_comments %}
     {% for comment in all_comments %}
-    <div class="thumbnail" style="background-color: #8faab896">
+    <div class="thumbnail" style="background-color: #98ad212a">
         <div class="caption">
             <div class="card" style="width: 40rem;">
                 <div class="card-body"> 
@@ -40,6 +40,6 @@
     </div>
     {% endfor %}
 {% else %}
-    <h3 class ="text-center" style="font-size:200%"> This Pitch has no Comment </h3>
+    <h3 class ="text-center" style="font-size:200%">no Comment is available</h3>
 {% endif %}
 {% endmacro %}
