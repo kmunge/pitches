@@ -1,0 +1,15 @@
+{% extends 'bootstrap/base.html'%}
+
+
+<!-- Navbar block  --> 
+{% block navbar %}
+    {% include 'navbar.html' %}
+{% endblock %}
+<!-- styles block -->
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    {{ simplemde.css}}
+    {{ simplemde.js }}
+{% endblock %}
