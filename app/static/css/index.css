@@ -1,22 +1,22 @@
 h4 {
     text-align: center;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, cursive;
     font-size: 200%;
 }
 .nameuser {
-    font-family: 'Pacifico', cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, cursive;
     font-size: 400%;
     text-decoration: underline;
     text-align: center;
 }
 .jumbo-header{
-    font-family: 'Pacifico', cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, cursive;
     text-decoration: underline
 }
 .jumbotron{
     background-color:rgba(35, 75, 73, 0.493)
 }
-/*.container{
+.container{
     background-image:url(https://previews.123rf.com/images/eratomoon22/eratomoon221605/eratomoon22160500004/58279703-blurred-bokeh-pastel-lights-background-abstract-background-with-pastel-colors-bokeh-the-esp-file-con.jpg)
     
-}*/
+}
