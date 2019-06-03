@@ -15,11 +15,12 @@ class Config:
     SIMPLEMDE_USE_CDN = True
     
 #  email configurations
-    MAIL_SERVER = 'smtp.gmail.com'
+    MAIL_SERVER ='smtp.gmail.com'
     MAIL_PORT = 587
     MAIL_USE_TLS = True
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
+    #SENDER_EMAIL = os.environ.get('MAIL_uSERNAME')
 
 class TestConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://omunge:123@localhost/blogs'
