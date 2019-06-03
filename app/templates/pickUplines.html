@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+
+
+{% block content %}
+    
+    <div class="container" class="cat-containers">
+        <div class="jumbotron">
+        <div class = "row">
+            <div class="col-md-10"> 
+                <h1 class="jumbo-header">Pick Up Lines Pitches</h1>
+            </div>
+            <div class="col-md-2">
+            <a class="btn btn-danger btn-md text-center"  href="{{url_for('main.new_pitch')}}"> Add a Pitch </a>
+            </div>    
+        </div>
+        </div>
+            <hr> 
+            {% if pitchPickup %}
+                {% for pickup in pitchPickup %}
+                <div class="col-xs-12 col-sm-6">
+                    <div class="thumbnail">
+                        <div class="caption">
+                                <div class="card-body" style="height:10em">
+                                    <p>{{pickup.pitch}}</p>
+                                    <p class="card-subtitle mb-2 text-muted"> Posted On:{{pickup.posted}} </p>
+                                    <p class="card-subtitle mb-2 text-muted">Author:{{pickup.user.username}} </p>
+                                    <a class="btn btn-warning btn-sm text-center" href="/pitch/new/comment/{{pickup.id}}"> View Comments </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                {% endfor%}
+            
+            {% else %}
+                <h3 class ="text-center" style="font-size:200%"> This category has no pitches </h3>
+                <a class="btn btn-success btn-sm text-center"  href="{{url_for('main.new_pitch')}}">Write a new Pitch</a>
+            {%endif%}
+    </div>
+
+{% endblock %}
