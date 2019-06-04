@@ -11,7 +11,7 @@ class PostTest(unittest.TestCase):
         '''
         Set up method that will run before every Test
         '''
-        self.new_pitch = Pitch(pitch = 'The best way to learn Python')
+        self.new_pitch = Pitch(pitch = 'How to make good pitches')
 
     def test_instance(self):
         self.assertTrue(isinstance(self.new_pitch,Pitch))

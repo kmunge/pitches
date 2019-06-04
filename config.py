@@ -23,7 +23,7 @@ class Config:
     #SENDER_EMAIL = os.environ.get('MAIL_uSERNAME')
 
 class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://omunge:123@localhost/blogs'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://omunge:123@localhost/pitcher'
 
 class ProdConfig(Config):
     '''
@@ -40,7 +40,7 @@ class DevConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://omunge:123@localhost/blogs'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://omunge:123@localhost/pitcher'
     DEBUG = True
 
 config_options = {
